@@ -1,0 +1,209 @@
+
+Lab 11 - Submission Form
+
+- Copy and paste each of your programs in the spaces below
+- Attach then send your text file to ybenkarroum@bmcc.cuny.edu by Monday 12/02/2019
+- Note: Using your first name and last name, the subject of your email must be: CSC101-1701 Lab11 – firstName lastName
+
+----------------------------------------
+---------------- Task 1 ----------------
+----------------------------------------
+
+def showMiles(kilometers):
+  miles = kilometers * 0.6214
+  print ("The conversion of", round(kilometers,2), "kilometers")
+  print ("to miles is", round(miles,2), "miles.")
+
+mykilometers = float(input("Enter the distance in kilometers: "))
+showMiles(mykilometers)
+
+
+----------------------------------------
+---------------- Task 2 ----------------
+----------------------------------------
+
+def askForReplacementCost():
+    replacementCost = float( input( "Please enter the replacement cost of your building: "))
+    return replacementCost
+
+def calculateMinimumInsurance( replacementCost ):
+    minimumInsurance = ( 80/ 100 ) * replacementCost
+    return minimumInsurance
+
+def printDetails( replacementCost, minimumInsurance ):
+    print( "Final experts advise that you should insure your house for $"
+    + format( minimumInsurance, ",.2f") + "because that's 80% of the replacement cost of your building," + \
+    "which is $" + format( replacementCost, ",.2f"))
+
+def main():
+    replacementCost = askForReplacementCost()
+    minimumInsurance = calculateMinimumInsurance( replacementCost)
+    printDetails(replacementCost, minimumInsurance)
+
+main()
+
+
+
+
+
+----------------------------------------
+---------------- Task 3 ----------------
+----------------------------------------
+
+def askForExpenses():
+    monthlyLoanPayment = float(input( "How much do you pay for your loan every month:"))
+    monthlyInsurancePayment = float(input("How much do you pay for your insurance every month:"))
+    monthlyGasPayment = float(input("How much do you pay for your gas every month:"))
+    monthlyMaintenancePayment = float(input("How much do you pay for your maintenance every month:"))
+    return monthlyLoanPayment, monthlyGasPayment, monthlyInsurancePayment, monthlyMaintenancePayment
+
+def calculateTotalMonthlyCost( payment1, payment2, payment3, payment4 ):
+    totalMonthlyCost = payment1 + payment2 + payment3 + payment4
+    return totalMonthlyCost
+
+def calculateTotalAnnualCost( totalMonthlyCost ):
+    totalAnnualCost = totalMonthlyCost * 12
+    return totalAnnualCost
+def printDetails( totalMonthlyCost, totalAnnualCost):
+    print( "Your total monthly cost is $" + format( totalMonthlyCost, ",.2f" ) + \
+           "\nYour total annual cost is $" + format( totalAnnualCost, ",.2f"))
+
+def main():
+    loanPayment, insurancePayment, gasPayment, maintenancePayment = askForExpenses()
+
+    totalMonthlyCost = calculateTotalMonthlyCost( loanPayment, insurancePayment, gasPayment, maintenancePayment)
+
+    totalAnnualCost = calculateTotalAnnualCost(totalMonthlyCost)
+
+    printDetails( totalMonthlyCost, totalAnnualCost )
+main()
+
+
+
+
+----------------------------------------
+---------------- Task 4 ----------------
+----------------------------------------
+
+def askForActualValueOfProperty():
+    actualValueOfProperty = float(input("What's the actual value of the property: "))
+
+    return actualValueOfProperty
+
+def calculateAssessmentValue( actualValueOfProperty):
+    assessmentValueOfProperty = (60 / 100) * actualValueOfProperty
+    return assessmentValueOfProperty
+
+def calculatePropertyTax( assessmentValue ):
+    propertyTax = (assessmentValue / 100 ) * 0.72
+    return propertyTax
+
+def printDetails( userActualValueOfProperty, assessmentValueOfProperty, propertyTax):
+    print("Actual Value of Property: $" + format( userActualValueOfProperty,  ",.2f")
+          + "Assessment Value of Property : $" + format(assessmentValueOfProperty,  ",.2f")
+          + "Property tax: $" + format( propertyTax,  ",.2f"))
+
+def main():
+    userActualValueOfProperty = askForActualValueOfProperty()
+    assessmentValueOfProperty = calculateAssessmentValue( userActualValueOfProperty)
+    propertyTax = calculatePropertyTax( assessmentValueOfProperty)
+    printDetails(userActualValueOfProperty, assessmentValueOfProperty, propertyTax)
+
+main()
+
+
+
+
+----------------------------------------
+---------------- Task 5 ----------------
+----------------------------------------
+
+
+def feet_to_inches(feet):
+  return 12 * feet
+  
+feet = float(input("Enter the number of feet: "))
+inches = feet_to_inches(feet)
+print (feet, "feet =", inches, "inches")
+
+
+----------------------------------------
+---------------- Task 6 ----------------
+----------------------------------------
+
+def max( firstNumber, secondmNumber):
+    if firstNumber > secondmNumber:
+        return firstNumber
+    else:
+        return secondmNumber
+def getNumberFromUser():
+    userFirstNumber = int(input( "Please enter the first number:"))
+    userSecondNumber = int(input( "Please enter the second number:"))
+    return userFirstNumber, userSecondNumber
+def main():
+    userFirstNumber, userSecondNumber = getNumberFromUser()
+    print("The maximum number between", userFirstNumber, "and", \
+        userSecondNumber, "is", max(userFirstNumber, userSecondNumber))
+main()
+
+
+
+
+----------------------------------------
+---------------- Task 7 ----------------
+----------------------------------------
+
+def fallingDistance( fallingTime ):
+    gravity = 9.8
+    distance = ( 1 / 2 ) * gravity * (fallingTime ** 2)
+    return distance
+
+def main():
+    print( "Time \tfallingDistance")
+    for currentTime in range( 1, 11 ):
+        print( currentTime, "\t", format(fallingDistance( currentTime ), \
+                                         ".2f"))
+
+main()
+
+
+
+
+-----------------------------------------
+----------- Task 8 (Optional) -----------
+-----------------------------------------
+
+import random
+
+def playGuessingGame(number):
+  userGuess = int(input("Enter a number between 1 and 100, or 0 to quit: "))
+
+  while userGuess > 0:
+    if userGuess > number:
+      print("Too high, try again")
+      userGuess = int(input("Enter a number between 1 and 100, or 0 to quit: "))
+    elif userGuess < number:
+      print("Too low, try again")
+      userGuess = int(input("Enter a number between 1 and 100, or 0 to quit: "))
+    else:
+      print("Congratulations! You guessed the right number!\n")
+      return userGuess   # Start the game again
+  return userGuess       # UserGuess is 0 and user wants to quit.
+
+play = 1
+while(play > 0):
+  number = random.randint(1,100)
+  play = playGuessingGame(number)
+
+print("Thanks for playing!")
+
+
+-----------------------------------------
+----------- Task 9 (Optional) -----------
+-----------------------------------------
+
+
+
+
+
+

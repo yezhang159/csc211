@@ -1,0 +1,144 @@
+
+Lab 09 - Submission Form
+
+- Copy and paste each of your programs in the spaces below
+- Attach then send your text file to ybenkarroum@bmcc.cuny.edu by Monday 11/18/2019
+- Note: Using your first name and last name, the subject of your email must be: CSC101-1701 Lab09 – firstName lastName
+
+----------------------------------------
+---------------- Task 1 ----------------
+----------------------------------------
+
+salesTotal = input("Enter the projected sales: ") 
+profit = float(salesTotal) * 0.23 
+print("The projected profit is ", round(profit,2)) 
+
+
+firstname = input("Input your First Name : ")
+lastname = input("Input your Last Name : ")
+print ("Hello  " + lastname + " "+ firstname)
+
+
+----------------------------------------
+---------------- Task 2 ----------------
+----------------------------------------
+
+PI = 3.14
+radius =float(input('Please Enter the Radius of a Sphere: '))
+Volume = (4/3) * PI * radius**3
+print("/n The Volume of a Sphere = %.2f" %Volume)
+
+
+
+
+----------------------------------------
+---------------- Task 3 ----------------
+----------------------------------------
+
+a = int(input("Enter a number:"))
+n1 = int("%s" % a)
+n2 = int("%s%s " %(a,a))
+n3 = int("%s%s%s" %(a,a,a))
+print(n1 + n2 + n3)
+
+
+
+
+----------------------------------------
+---------------- Task 4 ----------------
+----------------------------------------
+
+userAmountOfPurchase = float(input( " Please enter the amount of purchase: "))
+
+stateTax = 0.05 * userAmountOfPurchase
+countyTax = 0.025 * userAmountOfPurchase
+totalTax = stateTax + countyTax
+totalSale = userAmountOfPurchase + totalTax
+print( "Amount of purchase " + format( userAmountOfPurchase, ",.2f"), \
+       "State tax: $" + format( stateTax, ",.2f"), "County tax:$" + format( countyTax, ",.2f"),\
+        "Total tax: $" + format( totalTax, ",.2f"), "Total sale: $" + format( totalSale, ",.2f"))
+
+
+
+
+----------------------------------------
+---------------- Task 5 ----------------
+----------------------------------------
+
+item1 = float( input( "Please enter the price of the first item:"))
+item2 = float( input("Please enter the price of the second item:"))
+item3 = float( input("Please enter the price of the third item:"))
+item4 = float( input("Please enter the price of the fourth item:"))
+item5 = float( input("Please enter the price of the fifth item:"))
+
+subTotal = item1 + item2 + item3 + item4 + item5
+tax = 0.08 * subTotal
+total = subTotal + tax
+print("Sub total: $" + format( subTotal, ",.2f"), "Tax amount: $" + format( tax, ",.2f"), "Total: $" + \
+      format(total, ",.2f"))
+
+
+
+
+----------------------------------------
+---------------- Task 6 ----------------
+----------------------------------------
+
+celciusTemperature = float(input("Please enter a temperature in celcius:"))
+fahrenheitTemperature = (( 9 / 5 ) * celciusTemperature) + 32
+print( str( celciusTemperature) + " degrees in fahrenheit is " + format( fahrenheitTemperature, ".1f"))
+
+
+
+
+----------------------------------------
+---------------- Task 7 ----------------
+----------------------------------------
+
+regularBatchOfCookies = 48
+cupsOfSugarPer48Cookies = 1.5
+cupsOfButterPer48Cookies = 1
+cuosOfFlourPer48Cookies = 2.75
+
+userNumberOfCookies = float(input("How many cookies do you want to make:"))
+expectedCupsOfSugar = (userNumberOfCookies / regularBatchOfCookies) * cupsOfSugarPer48Cookies
+expectedCupsOfButter = (userNumberOfCookies/ regularBatchOfCookies) * cupsOfButterPer48Cookies
+expectedCupsOfFlour = (userNumberOfCookies/ regularBatchOfCookies) * cuosOfFlourPer48Cookies
+
+print("For " + str(userNumberOfCookies) + "you will need " + str(expectedCupsOfSugar) + "cups of sugar, " +\
+      str(expectedCupsOfButter) + "cups of butter and " + str(expectedCupsOfFlour)+ "cups of flour")
+
+
+
+
+----------------------------------------
+---------------- Task 8 ----------------
+----------------------------------------
+
+numberOfSharePurchased = 2000
+amountPaidPerShare = 40.00
+amountPaidForStock = numberOfSharePurchased * amountPaidPerShare
+commissionForBuying = 0.03 * amountPaidForStock
+numberOfShareSold = 2000
+amountSoldPerShare = 42.75
+amountReceivedForStock = numberOfShareSold * amountSoldPerShare
+commissionForSelling = 0.03 * amountReceivedForStock
+profit = (amountReceivedForStock - commissionForSelling) - (amountPaidForStock - commissionForBuying)
+
+print("Amount paid for stock:" + format( amountPaidForStock, ",.2f"), \
+      "Commission for buying:$" + format( commissionForBuying, ",.2f"), \
+      "Amount received for stock:$" + format( amountReceivedForStock, ",.2f"), \
+      "Commission for selling:$" + format( commissionForSelling, ",.2f"), "Profit:$" + format( profit, ",.2f"), \
+      sep ="\n")
+
+
+
+
+-----------------------------------------
+----------- Task 9 (Optional) -----------
+-----------------------------------------
+
+
+
+
+

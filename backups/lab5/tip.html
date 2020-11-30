@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ <title> Tip Calculator </title>
+</head>
+<body>
+ <h2>Tip Calculator</h2>
+ <p>
+ Enter the check amount: $<input type="text" id="amountBox" size=10 value="">
+ <br>
+ <p>
+    Enter the tip percentage: <input type="text" id="percBox" size=10 value="">
+    <br>
+ </p>
+
+ <input type="button" value="Calculate Tip"
+ onclick="myFunc()">
+
+ <div id="outputDiv"></div>
+
+ <script>
+    function myFunc() {
+      var amount = document.getElementById('amountBox').value;
+      var tip = amount * (document.getElementById('percBox').value*1)/100;
+      var num = parseFloat(tip);
+      document.getElementById('outputDiv').innerHTML=
+      ' You should tip ' + num.toFixed(2);
+    }
+ </script>
+
+</body>
+</html>

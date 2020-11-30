@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Die Rolls</title>
+  <script type="text/javascript">
+  function SelectImage(num)
+  {
+    roll=Math.floor(Math.random()*6) + 1;
+    imgName='http://balance3e.com/Images/die' + roll + '.gif';
+    document.getElementById('dieImg'+num).src = imgName;
+  }
+  
+  </script>
+</head>
+<body>
+  <div style="text-align:center">
+
+  <div class="dice1-container">
+    <img id="dieImg1" alt="die image"
+    src="http://balance3e.com/Images/die1.gif">
+    <button id="btn1" onclick="SelectImage(1)"> click </button> 
+  </div>
+  <div class="dice2-container">
+      <img id="dieImg2" alt="die image"
+      src="http://balance3e.com/Images/die1.gif">
+      <button id="btn2" onclick="SelectImage(2)"> click </button> 
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bits</title>
+</head>
+<body>
+    <h2>Bits Value</h2>
+    <input id="numInput" type="number"></input>
+    <button onclick="getBits()"">Click me</button>
+    <p id="outputText"></p>
+    <script>
+      function getBits(){
+        var input = document.getElementById("numInput").value
+        var res = Math.pow(2, input)
+        document.getElementById("outputText").innerHTML = `With ${input} bits, you can represent ${res} different values.`
+      }
+    </script>
+</body>
+</html>

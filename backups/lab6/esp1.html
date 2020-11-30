@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> ESP Test</title>
+    <script type="text/javascript">
+    function PickNumber()
+    //results: displays a random number between 1 and 4 in outputDiv
+    {
+      var number;
+      number = Math.floor(Math.random()*10) + 1;
+      document.getElementById('outputDiv').innerHTML =
+      'my number was ' + number + '. were you correct?';
+      }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center">
+    <h2> ESP Test</h2>
+    <p>
+      Think of a number between 1 and 10, then  click the button to see if you were right.
+    </p>
+    <input type="button" value="click tio see the number"
+          onclick="PickNumber();">
+    <hr>
+    <div id="outputDiv"></div>
+    
+    </div>
+  </body>
+</html>

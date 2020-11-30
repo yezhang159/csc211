@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+ <title> Time Calculator </title>
+</head>
+<body>
+ <h2>Time Calculator</h2>
+ <p>
+ Enter the year: <input type="text" id="yearBox" size=10 value="">
+ <br>
+ <input type="button" value="Calculate minutes"
+ onclick="amount = document.getElementById('yearBox').value;
+ minutes = amount * (document.getElementById('yearBox').value)* 525600;
+ document.getElementById('outputDiv').innerHTML=
+ 'that is ' + minutes + ' minutes';">
+
+ <div id="outputDiv"></div>
+</body>
+</html>

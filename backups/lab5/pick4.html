@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pick4</title>
+    <script>
+        function generateRands(){
+          var ballNum = document.getElementById("ballNumber").value
+          document.getElementById("rand1").innerHTML = Math.floor(Math.random() * ballNum)
+          document.getElementById("rand2").innerHTML = Math.floor(Math.random() * ballNum)
+          document.getElementById("rand3").innerHTML = Math.floor(Math.random() * ballNum)
+          document.getElementById("rand4").innerHTML = Math.floor(Math.random() * ballNum)
+        }
+      </script>
+  </head>
+<body>
+    <h2>The highest ball number is</h2>
+    <p>
+      <input type="text" id="ballNumber">
+   </p>
+   <button onclick="generateRands()">Get Winner!</button>
+   <br>
+   <div class="output">
+    <h5>The Winner is:  </h5>
+    <h5 id="rand1"></h5> -
+    <h5 id="rand2"></h5> -
+    <h5 id="rand3"></h5> -
+    <h5 id="rand4"></h5>
+   </div>
+<hr>
+<div id=""></div>
+
+<style>
+  .output, h5{
+    display: inline-block;
+  }
+</style>
+</body>
+</html>

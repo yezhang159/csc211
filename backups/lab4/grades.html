@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+ <title> Grade Calculator </title>
+</head>
+<body>
+ <h2>Grade Calculator</h2>
+ <p>
+ Enter the Homework Grade: <input type="text" id="HomeworkBox" size=10 value="">
+ <br>
+ </p>
+ Enter the Labs Grade: <input type="text" id="LabsBox" size=10 value="">
+ <br>
+ </p>
+ <p>
+  Enter the Midterm Exam Grade: <input type="text" id="MidtermBox" size=10 value="">
+  <br>
+ </p>
+  <p>
+  Enter the Final Exam Grade: <input type="text" id="FinalExamBox" size=10 value="">
+  <br>
+  </p>
+  <input type="button" value="Calculate Homework Average"
+  onclick="amount = parseFloat(document.getElementById('HomeworkBox').value);
+  homeworkAverage= amount * (25/100);
+  document.getElementById('outputDiv').innerHTML=
+  'Your homework average is ' + homeworkAverage">
+  <input type="button" value="Calculate Labs Average"
+  onclick="amount = parseFloat(document.getElementById('LabsBox').value);
+  labsAverage= amount * (20/100);
+  document.getElementById('outputDiv').innerHTML=
+  'Your labs average is ' + labsAverage">
+<input type="button" value="Calculate Midterm Exam Average"
+onclick="amount = parseFloat(document.getElementById('MidtermBox').value);
+midtermAverage= amount * (25/100);
+document.getElementById('outputDiv').innerHTML=
+'Your midterm average is ' + midtermAverage">
+<input type="button" value="Calculate Final Exam Average"
+onclick="amount = parseFloat(document.getElementById('FinalExamBox').value);
+finalexamAverage= amount * (30/100);
+document.getElementById('outputDiv').innerHTML=
+'Your finalexam average is ' + finalexamAverage">
+ <div id="outputDiv"></div>
+</body>
+</html>

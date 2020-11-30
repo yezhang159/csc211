@@ -1,0 +1,189 @@
+
+Lab 10 - Submission Form
+
+- Copy and paste each of your programs in the spaces below
+- Attach then send your text file to ybenkarroum@bmcc.cuny.edu by Monday 11/25/2019
+- Note: Using your first name and last name, the subject of your email must be: CSC101-1701 Lab10 – firstName lastName
+
+----------------------------------------
+---------------- Task 1 ----------------
+----------------------------------------
+
+day = int(input("Enter a number (1-7) for the day of the week: "))
+
+if day == 1:
+  print("Monday")
+elif day == 2:
+  print("Tuesday")
+elif day == 3:
+  print("Wednesday")
+elif day == 4:
+  print ("Thursday")
+elif day == 5:
+  print ("Friday")
+elif day == 6:
+  print ("Saturday")
+elif day == 7:
+  print ("Sunday")
+else:
+  print ("Error: Please enter a number in the range 1-7.")
+
+
+----------------------------------------
+---------------- Task 2 ----------------
+----------------------------------------
+
+number = int(input("Enter a number (1-10) for the Roman numeral version: "))
+if number == 1:
+    print("I")
+elif number == 2:
+    print("II")
+elif number == 3:
+    print("III")
+elif number == 4:
+    print("IV")
+elif number == 5:
+    print("V")
+elif number ==6:
+    print("VI")
+elif number ==7:
+    print("VII")
+elif number ==8:
+    print("VIII")
+elif number ==9:
+    print("IX")
+elif number == 10:
+    print("X")
+else:
+    print ("Error: Please enter a number in the range 1-10.")
+
+
+
+
+----------------------------------------
+---------------- Task 3 ----------------
+----------------------------------------
+
+age= int(input("Enter a number (1-18) for a person\'s age:"))
+if age < 2:
+    print("The person is an infant")
+elif age >= 2 and age < 13:
+    print("The person is a child")
+elif age >= 13 and age <18:
+    print("The person is a teenager")
+elif age == 18:
+    print("The person is an adult")
+
+
+
+
+----------------------------------------
+---------------- Task 4 ----------------
+----------------------------------------
+penny = int(input("Enter the number of pennies:"))
+nickel = int(input("Enter the number of nickels:"))
+dime = int(input("Enter the number of dimes:"))
+quarter = int(input("Enter the number of quarters"))
+pennies = 100
+nickels = 20
+dimes = 10
+quarters = 4
+dollar = (penny / pennies) + (nickel / nickels) + (dime / dimes) + (quarter / quarters)
+if dollar == 1:
+    print("You win the game!")
+elif dollar < 1:
+    print("sorry the amount you entered was less than one dollar.")
+elif dollar > 1:
+    print("sorry the amount you entered was greater than one dollar.")
+
+
+
+
+
+----------------------------------------
+---------------- Task 5 ----------------
+----------------------------------------
+
+total = 0
+
+for day in range(5):
+  bugs = int(input('Enter the number of bugs collected today: '))
+  total += bugs   
+
+print ('Total bugs collected: ', total)
+
+
+----------------------------------------
+---------------- Task 6 ----------------
+----------------------------------------
+
+for currentCelisiusTemperature in range (21):
+    fahrenheitTemperatureEquivalent = (9 / 5) * currentCelisiusTemperature +32
+    print(currentCelisiusTemperature, "c=", fahrenheitTemperatureEquivalent,"f")
+
+
+
+
+----------------------------------------
+---------------- Task 7 ----------------
+----------------------------------------
+
+budget = float(input('How much have you budgeted this month?'))
+expenses = 0
+balance = budget - expenses
+if balance < 0 :
+    print('You are over budget.Plan Better Next Time!')
+elif balance == 0 :
+    print('Spending matches budget.Good Planning!')
+elif balance >0 :
+    print('You are under budget.Well Done!')  
+
+
+
+
+----------------------------------------
+---------------- Task 8 ----------------
+----------------------------------------
+
+userInteger = int(input("please enter a number:"))
+while userInteger < 1:
+    userInteger = int(input("please enter a positive number:"))
+factorial = 1
+for currentNumber in range(1, userInteger + 1):
+    factorial = factorial * currentNumber
+print("The factorial of ", userInteger, "is", factorial)
+
+
+
+
+-----------------------------------------
+----------- Task 9 (Optional) -----------
+-----------------------------------------
+
+while True:
+  print("Options:")
+  print("Enter 'add' to add two numbers")
+  print("Enter 'quit' to end the program")
+  user_input = input(": ")
+
+  if user_input == "quit":
+    break
+  elif user_input == "add":
+    num1 = float(input("Enter a number: "))
+    num2 = float(input("Enter another number: "))
+    result = str(num1 + num2)  
+    print("The answer is " + result)
+  else:
+    print("Unknown input")  
+  print("\n-------------------------------\n")
+
+
+-----------------------------------------
+---------- Task 10 (Optional) -----------
+-----------------------------------------
+
+
+
+
+
+
